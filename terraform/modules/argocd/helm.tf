@@ -17,4 +17,5 @@ resource "helm_release" "argocd" {
   atomic            = true
   cleanup_on_fail   = true
   dependency_update = true
+
 }

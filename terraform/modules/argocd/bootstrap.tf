@@ -1,5 +1,7 @@
 resource "kubernetes_manifest" "root_application" {
+
   manifest = {
+
     apiVersion = "argoproj.io/v1alpha1"
     kind       = "Application"
 
@@ -13,6 +15,7 @@ resource "kubernetes_manifest" "root_application" {
     }
 
     spec = {
+
       project = "default"
 
       source = {
@@ -27,10 +30,12 @@ resource "kubernetes_manifest" "root_application" {
       }
 
       syncPolicy = {
+
         automated = {
           prune    = true
           selfHeal = true
         }
+
         syncOptions = [
           "CreateNamespace=true",
           "ServerSideApply=true"

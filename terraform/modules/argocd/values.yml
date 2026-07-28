@@ -30,6 +30,7 @@ configs:
 
   cm:
     timeout.reconciliation: 180s
+    admin.enable: true
 
 # ==============================================================================
 # API Server
